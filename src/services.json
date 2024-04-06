@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "freelancer": {
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "phone": "+1234567890",
+      "location": "New York, USA"
+    },
+    "category": "Web Development",
+    "service": "Responsive Website Development",
+    "description": "I offer responsive website development services using modern web technologies such as HTML5, CSS3, and JavaScript. Your website will be optimized for all devices and screen sizes.",
+    "price": 500,
+    "delivery_time": "2 weeks"
+  },
+  {
+    "id": 2,
+    "freelancer": {
+      "name": "Alice Smith",
+      "email": "alice@example.com",
+      "phone": "+1987654321",
+      "location": "Los Angeles, USA"
+    },
+    "category": "Graphic Design",
+    "service": "Logo Design",
+    "description": "I specialize in creating unique and memorable logos for businesses and brands. I'll work closely with you to understand your vision and create a logo that represents your brand identity.",
+    "price": 200,
+    "delivery_time": "1 week"
+  },
+  {
+    "id": 3,
+    "freelancer": {
+      "name": "Emily Johnson",
+      "email": "emily@example.com",
+      "phone": "+1654321879",
+      "location": "Chicago, USA"
+    },
+    "category": "Digital Marketing",
+    "service": "Social Media Management",
+    "description": "I provide social media management services to help businesses increase their online presence and engage with their audience. From content creation to community management, I'll handle all aspects of your social media strategy.",
+    "price": 300,
+    "delivery_time": "1 month"
+  },
+  {
+    "id": 4,
+    "freelancer": {
+      "name": "Michael Brown",
+      "email": "michael@example.com",
+      "phone": "+1555666777",
+      "location": "San Francisco, USA"
+    },
+    "category": "Content Writing",
+    "service": "Blog Post Writing",
+    "description": "I specialize in creating engaging and informative blog posts that resonate with your target audience. Whether you need long-form articles or short blog posts, I can deliver high-quality content tailored to your needs.",
+    "price": 100,
+    "delivery_time": "1 week"
+  },
+  {
+    "id": 5,
+    "freelancer": {
+      "name": "Sarah Johnson",
+      "email": "sarah@example.com",
+      "phone": "+1222333444",
+      "location": "Seattle, USA"
+    },
+    "category": "SEO Optimization",
+    "service": "Website SEO Audit",
+    "description": "I offer comprehensive website SEO audits to identify areas for improvement and optimize your site for better search engine rankings. From on-page optimization to keyword research, I'll help boost your website's visibility online.",
+    "price": 250,
+    "delivery_time": "2 days"
+  },
+  {
+    "id": 6,
+    "freelancer": {
+      "name": "David Miller",
+      "email": "david@example.com",
+      "phone": "+1888999000",
+      "location": "Boston, USA"
+    },
+    "category": "Mobile App Development",
+    "service": "iOS App Development",
+    "description": "I specialize in iOS app development, creating high-quality and user-friendly mobile applications for iPhone and iPad devices. From concept to deployment, I'll work closely with you to bring your app idea to life.",
+    "price": 800,
+    "delivery_time": "3 weeks"
+  }
+]
