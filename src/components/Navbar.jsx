@@ -3,7 +3,7 @@ import freelanceLogo from "../assets/freelance_logo.svg";
 
 const Navbar = () => {
   return (
-    <nav className="bg-green-700 border-b border-green-500">
+    <nav className="bg-green-600 border-b border-green-300">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
