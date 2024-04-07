@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import freelanceLogo from "../assets/freelance_logo.svg";
 
 const Navbar = () => {
@@ -8,10 +9,7 @@ const Navbar = () => {
         <div className="flex h-20 items-center justify-between">
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             {/* <!-- Logo --> */}
-            <a
-              className="flex flex-shrink-0 items-center mr-4"
-              href="/index.html"
-            >
+            <Link className="flex flex-shrink-0 items-center mr-4" to="/">
               <img
                 className="h-10 w-auto decoration-red-600"
                 src={freelanceLogo}
@@ -20,27 +18,27 @@ const Navbar = () => {
               <span className="hidden md:block text-white text-2xl font-bold ml-2">
                 Freelancer Services
               </span>
-            </a>
+            </Link>
             <div className="md:ml-auto">
               <div className="flex space-x-2">
-                <a
-                  href="/index.html"
+                <Link
+                  href="/"
                   className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
                   Home
-                </a>
-                <a
-                  href="/jobs.html"
+                </Link>
+                <Link
+                  to="/services"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
-                  Service
-                </a>
-                <a
-                  href="/add-job.html"
+                  Services
+                </Link>
+                <Link
+                  to="/add-service"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
                   Add Service
-                </a>
+                </Link>
               </div>
             </div>
           </div>
