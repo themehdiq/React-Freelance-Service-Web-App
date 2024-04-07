@@ -5,8 +5,7 @@ import ServiceListings from "../components/ServiceListings";
 const ServicesPage = () => {
   return (
     <>
-      <Hero />
-      <ServiceListings />
+      <ServiceListings isHome={false} />
     </>
   );
 };
