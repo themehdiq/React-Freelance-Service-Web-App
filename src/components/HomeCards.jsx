@@ -27,7 +27,7 @@ const HomeCards = () => {
               potential clients.
             </p>
             <Link
-              href="/add-job.html"
+              to="/add-service"
               className="inline-block bg-green-700 text-white rounded-lg px-4 py-2 hover:bg-indigo-600"
             >
               Add Service
