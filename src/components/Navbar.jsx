@@ -25,7 +25,7 @@ const Navbar = () => {
               </span>
             </NavLink>
             <div className="md:ml-auto">
-              <div className="flex space-x-2">
+              <div className="flex space-x-2 font-openSans">
                 <NavLink to="/" className={activeLink}>
                   Home
                 </NavLink>

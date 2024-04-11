@@ -3,11 +3,6 @@ import { React, useState, useEffect } from "react";
 import ServiceListing from "./ServiceListing";
 import Spinner from "./Spinner";
 
-const override = {
-  display: "block",
-  margin: "100px auto",
-};
-
 const ServiceListings = ({ isHome = false }) => {
   let [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,7 +10,7 @@ const ServiceListings = ({ isHome = false }) => {
   useEffect(() => {
     try {
       const fetchServices = async () => {
-        const res = await fetch("http://localhost:8000/services");
+        const res = await fetch("api/services");
         const data = await res.json();
         setServices(data);
       };
