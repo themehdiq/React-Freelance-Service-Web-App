@@ -16,7 +16,7 @@ const ServiceListing = ({ service }) => {
       <div className="p-4">
         <div className="mb-6">
           <div className="text-gray-600 my-2">{service.freelancer.name}</div>
-          <h3 className="text-xl font-bold">{service.service}</h3>
+          <h3 className="text-xl font-bold">{service.category}</h3>
         </div>
 
         <div className="mb-5 h-28">
@@ -41,7 +41,7 @@ const ServiceListing = ({ service }) => {
         <div className="flex flex-col lg:flex-row justify-between mb-4">
           <div className="text-orange-700 mb-3">{service.category}</div>
           <Link
-            to={`/jobs/${service.id}`}
+            to={`/services/${service.id}`}
             className="h-[36px] bg-green-700 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-center text-sm"
           >
             Read More

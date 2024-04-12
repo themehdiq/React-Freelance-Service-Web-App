@@ -7,6 +7,9 @@ export default {
         openSans: ["Open Sans"],
         oswald: ["Oswald"],
       },
+      gridTemplateColumns: {
+        "70/30": "70% 28%",
+      },
     },
   },
   plugins: [],

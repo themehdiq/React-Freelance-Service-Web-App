@@ -10,7 +10,7 @@ const ServiceListings = ({ isHome = false }) => {
   useEffect(() => {
     try {
       const fetchServices = async () => {
-        const res = await fetch("api/services");
+        const res = await fetch("/api/services");
         const data = await res.json();
         setServices(data);
       };
