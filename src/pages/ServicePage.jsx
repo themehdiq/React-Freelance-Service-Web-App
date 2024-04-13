@@ -1,9 +1,11 @@
 import { React, useState, useEffect } from "react";
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 
-const ServicePage = () => {
+const ServicePage = ({ deleteService }) => {
+  const navigate = useNavigate();
+
   let { id } = useParams();
   const [service, setService] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,7 +16,7 @@ const ServicePage = () => {
         const res = await fetch(`/api/services/${id}`);
         const data = await res.json();
         setService(data);
-        // console.log(service.freelancer.name);
+        // console.log(data);
       } catch (error) {
         console.log("error fetching", error);
       } finally {
@@ -23,6 +25,17 @@ const ServicePage = () => {
     };
     fetchService();
   }, []);
+
+  const onDeleteService = (serviceId) => {
+    const confirm = window.confirm(
+      "Are you sure you want to delete this service ?"
+    );
+
+    if (!confirm) return;
+
+    deleteService(serviceId);
+    navigate("/services");
+  };
 
   return loading ? (
     <Spinner />
@@ -105,7 +118,10 @@ const ServicePage = () => {
                 >
                   Edit Job
                 </Link>
-                <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+                <button
+                  onClick={() => onDeleteService(service.id)}
+                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                >
                   Delete Job
                 </button>
               </div>

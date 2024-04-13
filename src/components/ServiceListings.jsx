@@ -50,4 +50,4 @@ const ServiceListings = ({ isHome = false }) => {
   );
 };
 
-export default ServiceListings;
+export { ServiceListings as default, useEffect };

@@ -1,7 +1,7 @@
 {
   "services": [
     {
-      "id": 1,
+      "id": "1",
       "freelancer": {
         "name": "John Doe",
         "email": "johndoe@example.com",
@@ -15,7 +15,7 @@
       "delivery_time": "2 weeks"
     },
     {
-      "id": 2,
+      "id": "2",
       "freelancer": {
         "name": "Alice Smith",
         "email": "alice@example.com",
@@ -29,7 +29,7 @@
       "delivery_time": "1 week"
     },
     {
-      "id": 3,
+      "id": "3",
       "freelancer": {
         "name": "Emily Johnson",
         "email": "emily@example.com",
@@ -43,7 +43,7 @@
       "delivery_time": "1 month"
     },
     {
-      "id": 4,
+      "id": "4",
       "freelancer": {
         "name": "Michael Brown",
         "email": "michael@example.com",
@@ -57,7 +57,7 @@
       "delivery_time": "1 week"
     },
     {
-      "id": 5,
+      "id": "5",
       "freelancer": {
         "name": "Sarah Johnson",
         "email": "sarah@example.com",
@@ -71,7 +71,7 @@
       "delivery_time": "2 days"
     },
     {
-      "id": 6,
+      "id": "6",
       "freelancer": {
         "name": "David Miller",
         "email": "david@example.com",
