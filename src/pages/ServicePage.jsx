@@ -1,32 +1,38 @@
-import { React, useState, useEffect } from "react";
+import { React } from "react";
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
-import { useParams, Link, useNavigate } from "react-router-dom";
-import Spinner from "../components/Spinner";
+import { useParams, Link, useNavigate, useLoaderData } from "react-router-dom";
+// For toastify package to notice that the service is successfully deleted
+import { toast } from "react-toastify";
 
 const ServicePage = ({ deleteService }) => {
   const navigate = useNavigate();
 
-  let { id } = useParams();
-  const [service, setService] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // let { id } = useParams();
 
-  useEffect(() => {
-    const fetchService = async () => {
-      try {
-        const res = await fetch(`/api/services/${id}`);
-        const data = await res.json();
-        setService(data);
-        // console.log(data);
-      } catch (error) {
-        console.log("error fetching", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchService();
-  }, []);
+  // Service data now is in service variable using useLoaderData
+  const service = useLoaderData();
+  // Fetching single service by id (method 1)
+
+  // const [service, setService] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   const fetchService = async () => {
+  //     try {
+  //       const res = await fetch(`/api/services/${id}`);
+  //       const data = await res.json();
+  //       setService(data);
+  //       // console.log(data);
+  //     } catch (error) {
+  //       console.log("error fetching", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   fetchService();
+  // }, []);
 
   const onDeleteService = (serviceId) => {
+    // confirmation pop-up to validate the delition decision
     const confirm = window.confirm(
       "Are you sure you want to delete this service ?"
     );
@@ -34,12 +40,13 @@ const ServicePage = ({ deleteService }) => {
     if (!confirm) return;
 
     deleteService(serviceId);
+
+    // using toastify package to declare that the service is deleted !
+    toast.success("Job Deleted Successfully");
     navigate("/services");
   };
 
-  return loading ? (
-    <Spinner />
-  ) : (
+  return (
     <>
       <section>
         <div className="container m-auto py-6 px-6">
@@ -133,4 +140,11 @@ const ServicePage = ({ deleteService }) => {
   );
 };
 
-export default ServicePage;
+// loader feature to fetch data and use it somewhere also
+const serviceLoader = async ({ params }) => {
+  const res = await fetch(`/api/services/${params.id}`);
+  const data = await res.json();
+  return data;
+};
+
+export { ServicePage as default, serviceLoader };

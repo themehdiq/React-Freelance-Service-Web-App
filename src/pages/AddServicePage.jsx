@@ -1,5 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+// for toastify package to notice that the service is successfully added
+import { toast } from "react-toastify";
 
 const AddServicePage = ({ addServiceSubmit }) => {
   const [services, setServices] = useState([]);
@@ -14,7 +16,7 @@ const AddServicePage = ({ addServiceSubmit }) => {
   const [price, setPrice] = useState("");
   const [deliveryTime, setDeliveryTime] = useState("");
 
-  // to use services length to incremente the id
+  // Fetching all services to use length to incremente the id
   useEffect(() => {
     const fetchService = async () => {
       try {
@@ -54,6 +56,9 @@ const AddServicePage = ({ addServiceSubmit }) => {
     };
 
     addServiceSubmit(newService);
+
+    // using toastify package to declare that the service is added !
+    toast.success("Service Added Successfully !");
 
     // navigate to services page when submitting
     return navigate("/services");

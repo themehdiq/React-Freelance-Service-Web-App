@@ -11,13 +11,13 @@
       "category": "Web Development",
       "service": "Responsive Website Development",
       "description": "I offer responsive website development services using modern web technologies such as HTML5, CSS3, and JavaScript. Your website will be optimized for all devices and screen sizes.",
-      "price": 500,
+      "price": "50",
       "delivery_time": "2 weeks"
     },
     {
       "id": "2",
       "freelancer": {
-        "name": "Alice Smith",
+        "name": "Younes Qazzih",
         "email": "alice@example.com",
         "phone": "+1987654321",
         "location": "Los Angeles, USA"
