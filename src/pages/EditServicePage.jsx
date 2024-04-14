@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { useParams, useLoaderData, useNavigate } from "react-router-dom";
+import { useParams, useLoaderData, useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const EditServicePage = ({ editServiceSubmit }) => {
@@ -250,13 +250,20 @@ const EditServicePage = ({ editServiceSubmit }) => {
               />
             </div>
 
-            <div>
+            <div className="bg-white p-6 rounded-lg shadow-md mt-6">
               <button
                 className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                 type="submit"
               >
                 Edit Service
               </button>
+
+              <Link
+                className="bg-[rgb(49,48,48)] hover:bg-[rgb(34,34,37)] text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block text-center"
+                to={`/services/${id}`}
+              >
+                Cancel
+              </Link>
             </div>
           </form>
         </div>
